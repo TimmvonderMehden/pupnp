@@ -11,28 +11,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\upnp\src\api\ActionComplete.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\ActionRequest.c">
-      <Filter>sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\upnp\src\genlib\client_table\client_table.c">
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\upnp\src\genlib\client_table\ClientSubscription.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\Discovery.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\Event.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\EventSubscribe.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\FileInfo.c">
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\upnp\src\gena\gena_callback2.c">
@@ -83,25 +65,13 @@
     <ClCompile Include="..\..\upnp\src\ssdp\ssdp_device.c">
       <Filter>sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\upnp\src\ssdp\ssdp_ResultData.c">
-      <Filter>sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\upnp\src\ssdp\ssdp_server.c">
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\upnp\src\genlib\net\http\statcodes.c">
       <Filter>sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\StateVarComplete.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\StateVarRequest.c">
-      <Filter>sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\upnp\src\genlib\util\strintmap.c">
-      <Filter>sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\upnp\src\api\SubscriptionRequest.c">
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\upnp\src\uuid\sysdep.c">
@@ -138,6 +108,36 @@
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\upnp\src\win_dll.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpFileInfo.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpActionComplete.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpActionRequest.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpDiscovery.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpEvent.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpEventSubscribe.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpSubscriptionRequest.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpStateVarComplete.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\api\UpnpStateVarRequest.c">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\upnp\src\ssdp\SSDPResultData.c">
       <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -310,5 +310,26 @@
     <ClInclude Include="..\..\upnp\src\inc\webserver.h">
       <Filter>headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\upnp\inc\UpnpActionRequest.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\upnp\inc\UpnpActionComplete.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\upnp\inc\UpnpEventSubscribe.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\upnp\inc\UpnpDiscovery.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\upnp\inc\UpnpEvent.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\upnp\inc\UpnpFileInfo.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

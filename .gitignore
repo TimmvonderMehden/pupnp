@@ -155,3 +155,5 @@ upnp/generator/generator
 /build/vc10/IUpnpErrFile.txt
 /build/vc10/IUpnpInfoFile.txt
 /build/vc10/*.opensdf
+pupnp/build/vc10/*/**
+build/vc10/packages/

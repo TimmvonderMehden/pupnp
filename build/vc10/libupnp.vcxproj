@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Xfx_pthreads.2.9.1.1\build\native\Xfx_pthreads.props" Condition="Exists('packages\Xfx_pthreads.2.9.1.1\build\native\Xfx_pthreads.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug Lib|Win32">
       <Configuration>Debug Lib</Configuration>
@@ -44,44 +45,52 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lib|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lib|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lib|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -173,7 +182,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>IXML_HAVE_SCRIPTSUPPORT;WIN32;NDEBUG;RELEASE;_WINDOWS;_USRDLL;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -236,7 +245,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -291,7 +300,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>IXML_HAVE_SCRIPTSUPPORT;DEBUG;WIN32;_WINDOWS;_USRDLL;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -351,7 +360,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG;WIN32;_USRDLL;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -403,7 +412,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>IXML_HAVE_SCRIPTSUPPORT;WIN32;DEBUG;_WINDOWS;PTW32_STATIC_LIB;UPNP_STATIC_LIB;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -448,7 +457,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;DEBUG;_WINDOWS;PTW32_STATIC_LIB;UPNP_STATIC_LIB;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -492,7 +501,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\inc;..\msvc;..\..\upnp\inc;..\..\upnp\src\inc;..\..\ixml\inc;..\..\ixml\src\inc;..\..\threadutil\inc;..\..\pthreads;..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>IXML_HAVE_SCRIPTSUPPORT;WIN32;NDEBUG;RELEASE;_WINDOWS;PTW32_STATIC_LIB;UPNP_STATIC_LIB;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -540,7 +549,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\inc;$(SolutionDir)\..\msvc;$(SolutionDir)\..\..\upnp\inc;$(SolutionDir)\..\..\upnp\src\inc;$(SolutionDir)\..\..\ixml\inc;$(SolutionDir)\..\..\ixml\src\inc;$(SolutionDir)\..\..\threadutil\inc;$(SolutionDir)\..\..\pthreads;$(SolutionDir)\..\..\pthreads\include;%(AdditionalIncludeDirectories);C:\dev\ext\pupnp\upnp\src\threadutil;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;RELEASE;_WINDOWS;PTW32_STATIC_LIB;UPNP_STATIC_LIB;UPNP_USE_MSVCPP;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SECURE_SCL;_SCL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_AFX_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_COM_SUPPORT;_ATL_SECURE_NO_WARNINGS;_ATL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -570,19 +579,23 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\upnp\src\api\ActionComplete.c" />
-    <ClCompile Include="..\..\upnp\src\api\ActionRequest.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpActionComplete.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpActionRequest.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpDiscovery.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpEvent.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpEventSubscribe.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpFileInfo.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpStateVarComplete.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpStateVarRequest.c" />
+    <ClCompile Include="..\..\upnp\src\api\UpnpSubscriptionRequest.c" />
     <ClCompile Include="..\..\upnp\src\genlib\client_table\client_table.c" />
     <ClCompile Include="..\..\upnp\src\genlib\client_table\ClientSubscription.c" />
-    <ClCompile Include="..\..\upnp\src\api\Discovery.c" />
-    <ClCompile Include="..\..\upnp\src\api\Event.c" />
-    <ClCompile Include="..\..\upnp\src\api\EventSubscribe.c" />
-    <ClCompile Include="..\..\upnp\src\api\FileInfo.c" />
     <ClCompile Include="..\..\upnp\src\gena\gena_callback2.c" />
     <ClCompile Include="..\..\upnp\src\gena\gena_ctrlpt.c" />
     <ClCompile Include="..\..\upnp\src\gena\gena_device.c" />
     <ClCompile Include="..\..\upnp\src\genlib\net\http\httpparser.c" />
     <ClCompile Include="..\..\upnp\src\genlib\net\http\httpreadwrite.c" />
+    <ClCompile Include="..\..\upnp\src\ssdp\SSDPResultData.c" />
     <ClCompile Include="..\..\upnp\src\uuid\md5.c" />
     <ClCompile Include="..\..\upnp\src\genlib\util\membuffer.c" />
     <ClCompile Include="..\..\upnp\src\genlib\miniserver\miniserver.c" />
@@ -594,13 +607,9 @@
     <ClCompile Include="..\..\upnp\src\genlib\net\sock.c" />
     <ClCompile Include="..\..\upnp\src\ssdp\ssdp_ctrlpt.c" />
     <ClCompile Include="..\..\upnp\src\ssdp\ssdp_device.c" />
-    <ClCompile Include="..\..\upnp\src\ssdp\ssdp_ResultData.c" />
     <ClCompile Include="..\..\upnp\src\ssdp\ssdp_server.c" />
     <ClCompile Include="..\..\upnp\src\genlib\net\http\statcodes.c" />
-    <ClCompile Include="..\..\upnp\src\api\StateVarComplete.c" />
-    <ClCompile Include="..\..\upnp\src\api\StateVarRequest.c" />
     <ClCompile Include="..\..\upnp\src\genlib\util\strintmap.c" />
-    <ClCompile Include="..\..\upnp\src\api\SubscriptionRequest.c" />
     <ClCompile Include="..\..\upnp\src\uuid\sysdep.c" />
     <ClCompile Include="..\..\upnp\src\genlib\util\upnp_timeout.c" />
     <ClCompile Include="..\..\upnp\src\api\upnpapi.c" />
@@ -617,6 +626,12 @@
   <ItemGroup>
     <ClInclude Include="..\..\upnp\inc\ActionComplete.h" />
     <ClInclude Include="..\..\upnp\inc\ActionRequest.h" />
+    <ClInclude Include="..\..\upnp\inc\UpnpActionComplete.h" />
+    <ClInclude Include="..\..\upnp\inc\UpnpActionRequest.h" />
+    <ClInclude Include="..\..\upnp\inc\UpnpDiscovery.h" />
+    <ClInclude Include="..\..\upnp\inc\UpnpEvent.h" />
+    <ClInclude Include="..\..\upnp\inc\UpnpEventSubscribe.h" />
+    <ClInclude Include="..\..\upnp\inc\UpnpFileInfo.h" />
     <ClInclude Include="..\inc\autoconfig.h" />
     <ClInclude Include="..\..\upnp\inc\Callback.h" />
     <ClInclude Include="..\..\upnp\src\inc\client_table.h" />
@@ -682,7 +697,15 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Xfx_pthreads.2.9.1.1\build\native\Xfx_pthreads.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xfx_pthreads.2.9.1.1\build\native\Xfx_pthreads.props'))" />
+  </Target>
 </Project>
