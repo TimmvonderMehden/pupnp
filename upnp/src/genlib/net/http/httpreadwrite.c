@@ -54,8 +54,9 @@
 #include "upnpapi.h"
 #include "uri.h"
 #include "webserver.h"
-
+#ifndef _WIN32
 #include <alloca.h>
+#endif
 #include <assert.h>
 #include <stdarg.h>
 #include <string.h>
@@ -2285,7 +2286,7 @@ void get_sdk_info(char *info, size_t infoSize)
 		snprintf(info,
 			infoSize,
 			"%d.%d.%d %d/%s, UPnP/1.0, Portable SDK for UPnP "
-			"devices/" PACKAGE_VERSION "\r\n",
+			"devices\r\n",
 			versioninfo.dwMajorVersion,
 			versioninfo.dwMinorVersion,
 			versioninfo.dwBuildNumber,

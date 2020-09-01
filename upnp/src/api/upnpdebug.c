@@ -219,7 +219,7 @@ static void UpnpDisplayFileAndLine(FILE *fp,
 	#ifdef __PTW32_DLLPORT
 		(unsigned long int)ithread_self().p
 	#else
-		(unsigned long int)ithread_self()
+		(ithread_self())
 	#endif
 		,
 		DbgFileName,
